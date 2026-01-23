@@ -21,7 +21,7 @@ type Game struct {
 
 func New(min, max, attempts int) *Game {
 	return &Game{
-		secretNumber:  rand.Intn(max-min+1) + 1,
+		secretNumber:  rand.Intn(max-min+1) + min,
 		min:           min,
 		max:           max,
 		attemptsLeft:  attempts,
